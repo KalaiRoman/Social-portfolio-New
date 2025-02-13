@@ -1,45 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { Provider } from "react-redux";
-import { Store } from './redux/store/Store';
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.js";
-import 'react-tooltip/dist/react-tooltip.css'
-
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import { BrowserRouter } from "react-router-dom";
-import 'animate.css';
-import { ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import ReduxProvider from "./middleware/ReduxProvider";
+import ToastProvider from "./middleware/ToastProvider";
+import { ErrorProvider } from "./contextapi/ErrorContext";
+import ErrorBoundary from "./middleware/ErrorBoundary";
+import BrowserRouters from "./middleware/BrowserRouters";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <>
-    <BrowserRouter>
-    <ToastContainer
-    position="bottom-center"
-    autoClose={5000}
-    hideProgressBar={false}
-    newestOnTop={false}
-    closeOnClick
-    rtl={false}
-    pauseOnFocusLoss
-    draggable
-    pauseOnHover
-    theme="dark"
- 
-    />
-      <Provider store={Store}>
-        <App />
-      </Provider>
-    </BrowserRouter>
-  </>
+  // BrowerRouter
+  <BrowserRouters>
+    {/* error Boundary */}
+    <ErrorBoundary>
+      {/* redux provider */}
+      <ReduxProvider>
+        {/* error context api provider */}
+        <ErrorProvider>
+          {/* toast modal */}
+          <ToastProvider>
+            {/* over all component in app */}
+            <App />
+          </ToastProvider>
+        </ErrorProvider>
+      </ReduxProvider>
+    </ErrorBoundary>
+  </BrowserRouters>
 );
-
 
 reportWebVitals();
