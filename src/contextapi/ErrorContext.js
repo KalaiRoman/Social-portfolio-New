@@ -6,10 +6,8 @@ export const useError = () => useContext(ErrorContext);
 
 export const ErrorProvider = ({ children }) => {
   const [error, setError] = useState(null);
-
   const handleError = (message) => {
     setError(message);
-    console.error("Global Error:", message);
   };
   return (
     <ErrorContext.Provider value={{ error, handleError }}>
