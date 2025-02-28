@@ -1,0 +1,159 @@
+@import '../../sass/media';
+
+.f-h1 {
+    font-size: 28px;
+}
+
+.f-h2 {
+    font-size: 24px;
+}
+
+.f-h3 {
+    font-size: 20px;
+}
+
+.f-h4 {
+    font-size: 18px;
+}
+
+.f-h5 {
+    font-size: 16px;
+}
+
+.f-h6 {
+    font-size: 14px;
+}
+
+// response
+
+@include respond("xs") {
+    .f-h1 {
+        font-size: 32px;
+    }
+
+    .f-h2 {
+        font-size: 28px;
+    }
+
+    .f-h3 {
+        font-size: 24px;
+    }
+
+    .f-h4 {
+        font-size: 20px;
+    }
+
+    .f-h5 {
+        font-size: 18px;
+    }
+
+    .f-h6 {
+        font-size: 16px;
+    }
+}
+
+
+@include respond("sm") {
+    .f-h1 {
+        font-size: 32px;
+    }
+
+    .f-h2 {
+        font-size: 28px;
+    }
+
+    .f-h3 {
+        font-size: 24px;
+    }
+
+    .f-h4 {
+        font-size: 20px;
+    }
+
+    .f-h5 {
+        font-size: 18px;
+    }
+
+    .f-h6 {
+        font-size: 16px;
+    }
+}
+
+
+@include respond("md") {
+    .f-h1 {
+        font-size: 36px;
+    }
+
+    .f-h2 {
+        font-size: 32px;
+    }
+
+    .f-h3 {
+        font-size: 28px;
+    }
+
+    .f-h4 {
+        font-size: 24px;
+    }
+
+    .f-h5 {
+        font-size: 20px;
+    }
+
+    .f-h6 {
+        font-size: 18px;
+    }
+}
+
+@include respond("lg") {
+    .f-h2 {
+        font-size: 36px;
+    }
+
+    .f-h3 {
+        font-size: 32px;
+    }
+
+    .f-h4 {
+        font-size: 28px;
+    }
+
+    .f-h5 {
+        font-size: 24px;
+    }
+
+    .f-h6 {
+        font-size: 20px;
+    }
+
+    .f-h1 {
+        font-size: 40px;
+    }
+}
+
+@include respond("xl") {
+    .f-h1 {
+        font-size: 48px;
+    }
+
+    .f-h2 {
+        font-size: 42px;
+    }
+
+    .f-h3 {
+        font-size: 36px;
+    }
+
+    .f-h4 {
+        font-size: 32px;
+    }
+
+    .f-h5 {
+        font-size: 28px;
+    }
+
+    .f-h6 {
+        font-size: 24px;
+    }
+}

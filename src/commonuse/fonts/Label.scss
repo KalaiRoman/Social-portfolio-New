@@ -1,0 +1,67 @@
+@import '../../sass/media';
+
+
+
+
+// colors
+
+
+.label-primary {
+    color: #007bff;
+}
+
+.label-danger {
+    color: #dc3545;
+
+}
+
+.label-success {
+    color: #28a745;
+}
+
+label:hover {
+    color: #ff5733;
+
+}
+
+
+label {
+    font-size: 14px;
+    color: #333;
+
+    @include respond("xs") {
+        label {
+            font-size: 16px;
+        }
+    }
+
+    @include respond("sm") {
+        label {
+            font-size: 16px;
+        }
+    }
+
+    @include respond("md") {
+        label {
+            font-size: 18px;
+        }
+    }
+
+    @include respond("lg") {
+        label {
+            font-size: 20px;
+        }
+    }
+
+    @include respond("xl") {
+        label {
+            font-size: 22px;
+        }
+    }
+
+    @include respond("xxl") {
+        label {
+            font-size: 24px;
+        }
+    }
+}
