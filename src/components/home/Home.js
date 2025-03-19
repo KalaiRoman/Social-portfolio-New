@@ -7,8 +7,10 @@ function Home() {
       <div className="inside-home">
         <div className="inside-home-section">
           <div className="tab-sections">
-            
             <TabSections />
+          </div>
+          <div className="body-section-home">
+            bodu
           </div>
         </div>
       </div>

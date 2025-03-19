@@ -11,14 +11,13 @@
         margin: 0.8% auto;
         border-radius: 10px;
         background-color: white;
-        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         position: relative;
         padding: 4px;
 
         .inside-home-section {
             width: 100%;
             height: 100%;
+            border-radius: 10px;
 
             .tab-sections {
                 width: auto;
@@ -28,16 +27,38 @@
             }
 
 
+            .body-section-home {
+                width: 100%;
+                height: 100%;
+                border: 1px solid blue;
+            }
         }
     }
 }
 
 // tab
-
 .tabs {
     width: 100%;
     display: flex;
     gap: 20px;
+    position: relative;
+
+    .tap-box-show {
+        width: 300px;
+        height: 50px;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        border-radius: 10px;
+        top: 100%;
+        display: flex;
+        gap: 20px;
+        border: 3px solid blue;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+
+    }
 
     .tab-box {
         width: 50px;
@@ -47,23 +68,27 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: 5px;
+        padding: 10px;
         background-color: #f7f8fb;
-        // border-radius: 20px;
         border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        gap: 20px;
         cursor: pointer;
 
         .image-tab {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             background-color: white;
             border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            padding: 2px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
+            font-size: 23px;
             color: #ff5668 !important;
+        }
+
+        .image-tab:hover {
+            background-color: #ff5668;
+            color: white !important;
         }
     }
 }
