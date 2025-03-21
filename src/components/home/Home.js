@@ -1,6 +1,7 @@
 import React from "react";
 import HOC from "../../hoc/HOC";
 import TabSections from "./TabSections";
+import WhatsApp from "../whatsapp/WhatsApp";
 function Home() {
   return (
     <div className="main-home">
@@ -10,7 +11,7 @@ function Home() {
             <TabSections />
           </div>
           <div className="body-section-home">
-            bodu
+            <WhatsApp/>
           </div>
         </div>
       </div>

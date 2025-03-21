@@ -1,0 +1,43 @@
+@use '../sass/media';
+
+.main-whats-app {
+    width: 100%;
+    height: 100%;
+    border: 3px solid red;
+    display: flex;
+    gap: 0px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    .whats-app-left {
+        width: 25%;
+        border-right: 2px solid #f7f8fb;
+        height: 100%;
+        overflow: hidden;
+        overflow-y: auto;
+
+        @include respond("xs") {
+            width: 100%;
+        }
+
+        .chat-list
+        {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            .chat-list-card
+            {
+                background-color: white;
+                // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                border: 1px solid #f7f8fb;
+                padding: 20px 4px;
+            }
+        }
+    }
+
+    .whats-app-right {
+        width: 75%;
+
+
+    }
+}
