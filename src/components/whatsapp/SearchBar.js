@@ -3,8 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FaSearch, FaPlus, FaEllipsisV } from "react-icons/fa";
 
 export default function SearchBar() {
-  const [activeTab, setActiveTab] = useState("All");
-  const tabs = ["All", "Unread", "Favorites", "Groups"];
+  const [activeTab, setActiveTab] = useState("Home");
+  const tabs = ["Home", "Skills", "Projects", "Contact"];
 
   return (
     <div className="container p-3 bg-white  rounded">
@@ -24,11 +24,7 @@ export default function SearchBar() {
       {/* Search Bar */}
       <div className="position-relative mb-3">
         <FaSearch className="position-absolute top-50 start-0 translate-middle-y ms-3 text-secondary" />
-        <input
-          type="text"
-          className="form-control ps-5"
-          placeholder="Search"
-        />
+        <input type="text" className="form-control ps-5" placeholder="Search" />
       </div>
 
       {/* Filter Tabs */}
@@ -37,8 +33,8 @@ export default function SearchBar() {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`btn btn-sm px-3 rounded-pill ${
-              activeTab === tab ? "btn-success text-white" : "btn-light"
+            className={` ${
+              activeTab === tab ? "active-tab" : "inactive-tab"
             }`}
           >
             {tab}

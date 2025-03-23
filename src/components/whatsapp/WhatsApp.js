@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import ChatList from "./ChatList";
+import MessageSections from "./MessageSections";
 
 function WhatsApp() {
   return (
@@ -13,7 +14,9 @@ function WhatsApp() {
           <ChatList/>
         </div>
       </div>
-      <div className="whats-app-right">right</div>
+      <div className="whats-app-right">
+        <MessageSections/>
+      </div>
     </div>
   );
 }

@@ -2,12 +2,13 @@ import React from "react";
 import routingDatas from "../middleware/RoutingDatas";
 import { Route, Routes } from "react-router-dom";
 import ProtectedRouters from "../middleware/ProtectedRouters";
+import { Home, Instagram, WhatsApp } from "../pages/Pages";
 
 function Routings() {
   return (
     <div>
       <Routes>
-        {routingDatas?.map((item, index) =>
+        {/* {routingDatas?.map((item, index) =>
           item?.auth ? (
             <Route key={index}>
               <Route element={item?.component} path={item?.path} />
@@ -25,7 +26,12 @@ function Routings() {
               />
             </Route>
           ) : null
-        )}
+        )} */}
+        <Route element={<Home />}>
+          <Route path="/" element={<WhatsApp />} />
+          <Route path="/instagram" element={<Instagram />} />
+
+        </Route>
       </Routes>
     </div>
   );
